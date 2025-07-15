@@ -1,1 +1,1 @@
-print("Hola, mundo desde Python en VSCode!")
+print("Hola, mundo!")
