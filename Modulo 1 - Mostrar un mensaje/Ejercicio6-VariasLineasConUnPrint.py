@@ -1,0 +1,1 @@
+print("Hola\nMe llamo Martín\nTengo 30 años\nVivo en Argentina\nMe encanta programar")
