@@ -1,0 +1,11 @@
+# Multiplicar el número dado por 3.
+
+numero_str = "7"
+
+# Convertimos el strig en int...
+
+numero = int(numero_str)
+
+resultado_multiplicación = numero * 3
+
+print("El resultado de la multiplicación es:", resultado_multiplicación)
