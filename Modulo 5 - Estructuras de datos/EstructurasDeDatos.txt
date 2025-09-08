@@ -1,0 +1,38 @@
+Modulo 5 : Estructura de datos
+
+Parte 1: Listas
+
+Las listas son colecciones ordenadas de elementos que pueden cambiarse.
+Se pueden guardar numeros, cadenas, o incluso mezclar tipos.
+
+Ejemplo: 
+
+numeros = [1, 5, 8, 10]
+nombres = ["Martín", "Ana", "Luis"]
+mixta = [25, "Texto", True, 3.14]
+
+
+Operaciones basicas:
+
+Acceder a un elemento:
+
+print(numeros[0])        # primer elemento -> 1
+print(numeros[-1])       # último elemento -> 10
+
+Modificar un valor: 
+
+numeros[1] = 99
+
+Agregar elementos:
+
+numeros.append(50)
+
+Eliminar elementos:
+
+numeros.remove(8)        # Elimina por valor
+numeros.pop(0)           # Elimina por posición 
+
+Rebanadas (slicing):
+
+print(numeros[1:3])      # del índice 1 al 2
+print(numeros[::-1])     # lista invertida
