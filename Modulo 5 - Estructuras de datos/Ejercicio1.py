@@ -1,6 +1,7 @@
 # Crear una lista con al menos 5 números
 
 notasExamen = [6, 7, 5, 9, 10]
+print("Los elementos de la lista primitiva son: ",notasExamen)
 
 # Mostrar el primero elemento, el del medio y el ultimo
 
@@ -22,7 +23,7 @@ notasExamen.remove(5)
 
 # Imprimir la lista final
 
-print("Lista completa:", notasExamen)
+print("La lista modificada queda:", notasExamen)
 
 
 
