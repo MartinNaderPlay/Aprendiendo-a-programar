@@ -36,3 +36,16 @@ Rebanadas (slicing):
 
 print(numeros[1:3])      # del índice 1 al 2
 print(numeros[::-1])     # lista invertida
+
+otros ejemplos:
+
+letras = ["a", "b", "c", "d", "e", "f"]
+
+print(letras[1:4])             # Muestra ['b', 'c', 'd']           -->  desde índice 1 hasta 3 
+print(letras[:3])              # Muestra ['a', 'b', 'c']           -->  desde el inicio hasta el índice 2 
+print(letras[2:])              # Muestra ['c', 'd', 'e', 'f']      -->  desde el índice 2 hasta el final
+print(letras[-3:])             # Muestra ['d', 'e', 'f']           -->  últimos 3 elementos
+print(letras[::2])             # Muestra ['a', 'c', 'e']           -->  todos, pero de 2 en 2 
+
+
+ 
