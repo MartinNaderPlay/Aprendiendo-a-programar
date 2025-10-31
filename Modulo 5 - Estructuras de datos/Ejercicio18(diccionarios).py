@@ -13,7 +13,7 @@ productos = [
     {"Nombre" : "Yogur", "Precio" : 1250, "Stock" : 21}
 ]
 
-print("Lista de precios y stock de productos:\n")
+print("Lista inicial de precios y stock de productos:\n")
 for producto in productos:
     for clave, valor in producto.items():
         print(f"{clave} : {valor}")
@@ -26,10 +26,7 @@ productos[1]["Stock"] = productos[1]["Stock"] + 20
 productos[2]["Stock"] = productos[2]["Stock"] - 10
 
 
-total = 0
-
-for producto in productos:
-    total += ( producto["Stock"] * producto["Precio"] )
+total = sum(p["Precio"] * p["Stock"] for p in productos)
 
 print("El capital total de todo los productos es: ", total)
 print()
