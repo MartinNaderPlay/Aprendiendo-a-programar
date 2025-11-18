@@ -14,61 +14,32 @@ producto = {
     "Categoria" : ["Tecnología", "Computación"]
     }
 
-for clave, valor in producto.items():
-    if clave == "Categoria":
-        print(f"{clave}: ")
-        for linea in valor:
-            print(f"  -{linea}")
-    else:
-        print(f"{clave} : {valor}")
+def mostrarDiccionario(diccionario):
+    for clave, valor in producto.items():
+        if clave == "Categoria":
+            print(f"{clave}: ")
+            for linea in valor:
+                print(f"  -{linea}")
+        else:
+            print(f"{clave} : {valor}")
 
-print("\n-----Agregamos 'portatlies' al diccionario...-----")
+print("-----Diccionarios inicial-----")
+mostrarDiccionario(producto)
 
-producto["Categoria"] += ["Portatiles"]
-       
-for clave, valor in producto.items():
-    if clave == "Categoria":
-        print(f"{clave}: ")
-        for linea in valor:
-            print(f"  -{linea}")
-    else:
-        print(f"{clave} : {valor}")
+print("\n-----Agregamos 'portatiles' al diccionario...-----")
+producto["Categoria"] += ["Portatiles"]       
+mostrarDiccionario(producto)
 
 print("\n-----Restamos 3 unidades del stock...-----")
-
 producto["Stock"] -= 3
-
-for clave, valor in producto.items():
-    if clave == "Categoria":
-        print(f"{clave}: ")
-        for linea in valor:
-            print(f"  -{linea}")
-    else:
-        print(f"{clave} : {valor}")
+mostrarDiccionario(producto)
 
 print("\n-----Aplicamos un descuento del 10%...-----")
-
 producto["Descuento"] = 10
-
-for clave, valor in producto.items():
-    if clave == "Categoria":
-        print(f"{clave}: ")
-        for linea in valor:
-            print(f"  -{linea}")
-    else:
-        print(f"{clave} : {valor}")
+mostrarDiccionario(producto)
 
 print("\n-----El resultado final es:-----")
-
 producto["Precio"] = producto["Precio"] - producto["Precio"] * 0.10
-
 del producto["Descuento"]
-
-for clave, valor in producto.items():
-    if clave == "Categoria":
-        print(f"{clave}: ")
-        for linea in valor:
-            print(f"  -{linea}")
-    else:
-        print(f"{clave} : {valor}")
+mostrarDiccionario(producto)
 
