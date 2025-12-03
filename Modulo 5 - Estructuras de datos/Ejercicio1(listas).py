@@ -3,7 +3,7 @@
 notasExamen = [6, 7, 5, 9, 10]
 print("Los elementos de la lista primitiva son: ",notasExamen)
 
-# Mostrar el primero elemento, el del medio y el ultimo
+# Mostrar el primer elemento, el del medio y el ultimo
 
 print("El primer elemento de la lista es:", notasExamen[0])
 print("El elemento del medio de la lisa es:", notasExamen[2])
