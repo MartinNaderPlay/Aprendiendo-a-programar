@@ -6,23 +6,47 @@
 # Eliminar uno
 # Salir
 
-
 import json
 
 contactos = {
     "Martín" : 3865351457,
-    "Roberto" : 3865425592,
-    "Angela" : 381361568
+    "Catherine": 3865439856,
+    "Reperta": 381095489
 }
 
 with open("contactos.json", "w", encoding="utf-8") as f:
     json.dump(contactos, f, indent=4)
 
+def cargar(contact, num):
+    with open("contactos.json", "r", encoding="utf-8") as f:
+        json.load(f)
+        
+    contactos[contact] = num
+                                            
+    with open("contactos.json", "w", encoding="utf-8") as f:
+        json.dump(contactos, f, indent=4)
 
-with open("contactos.json", "r", encoding="utf-8") as f:
-    lista = json.load(f)
+def mostrar():
+    with open("contactos.json", "r", encoding="utf-8") as f:
+        listado = json.load(f)
+    for nombre, numero in listado.items():
+        print(f"{nombre} ---> {numero}")
 
-lista["Germán"] = 11365890
+def eliminar(contact):
+    del contactos[contact]
+    with open("contactos.json", "w", encoding="utf-8") as f:
+        json.dump(contactos, f, indent=4)
 
-with open("contactos.json", "w", encoding="utf-8") as f:
-    json.dump(lista, f, indent=4)
+
+while str(input("Desea realizar algun cambio en la lista?: (si/no): ")) == "si":
+
+    operacion = str(input("Ingrese la operación que desea realizar (cargar/mostrar/eliminar): "))
+    
+    if operacion == "cargar":
+        cargar(str(input("Nombre: ")), int(input("Numero: ")))
+    elif operacion == "mostrar":
+        mostrar()
+    elif operacion == "eliminar":
+        eliminar(str(input("Nombre: ")))
+
+
