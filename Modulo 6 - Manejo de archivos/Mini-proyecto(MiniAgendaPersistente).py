@@ -8,45 +8,47 @@
 
 import json
 
-contactos = {
-    "Martín" : 3865351457,
-    "Catherine": 3865439856,
-    "Reperta": 381095489
-}
+archivo = "contactos.json"
 
-with open("contactos.json", "w", encoding="utf-8") as f:
-    json.dump(contactos, f, indent=4)
+def leer_contactos():
+    try:
+        with open(archivo, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
 
-def cargar(contact, num):
-    with open("contactos.json", "r", encoding="utf-8") as f:
-        json.load(f)
-        
-    contactos[contact] = num
-                                            
-    with open("contactos.json", "w", encoding="utf-8") as f:
+def guardar_contactos(contactos):
+    with open(archivo, "w", encoding="utf-8") as f:
         json.dump(contactos, f, indent=4)
+
+#-------------------------------------------------------------------
+
+def cargar(nombre, numero):
+    contactos = leer_contactos()
+    contactos[nombre] = numero
+    guardar_contactos(contactos)
 
 def mostrar():
-    with open("contactos.json", "r", encoding="utf-8") as f:
-        listado = json.load(f)
-    for nombre, numero in listado.items():
-        print(f"{nombre} ---> {numero}")
+    contacto = leer_contactos()
+    print("\n---Lista de contactos---\n")
+    for nombre, numero in contacto.items():
+        print(f"{nombre}: {numero}")
 
-def eliminar(contact):
-    del contactos[contact]
-    with open("contactos.json", "w", encoding="utf-8") as f:
-        json.dump(contactos, f, indent=4)
+def eliminar(nombre):
+    contactos = leer_contactos()
+    if nombre in contactos:
+        del contactos[nombre]
+        guardar_contactos(contactos)
+    else:
+        print("El contacto no existe...")
 
+#-------------------------------------------------------------------
 
-while str(input("Desea realizar algun cambio en la lista?: (si/no): ")) == "si":
-
-    operacion = str(input("Ingrese la operación que desea realizar (cargar/mostrar/eliminar): "))
-    
-    if operacion == "cargar":
-        cargar(str(input("Nombre: ")), int(input("Numero: ")))
-    elif operacion == "mostrar":
+while str(input("\nDesea ver o modificar la agenda? (si/no): ")) == "si":
+    operacion = str(input("\nEscriba la operación que quiere realizar (ver-agregar-eliminar): ")) 
+    if operacion == "ver":
         mostrar()
+    elif operacion == "agregar":
+        cargar(str(input("Nombre: ")), int(input("Número: ")))
     elif operacion == "eliminar":
         eliminar(str(input("Nombre: ")))
-
-
