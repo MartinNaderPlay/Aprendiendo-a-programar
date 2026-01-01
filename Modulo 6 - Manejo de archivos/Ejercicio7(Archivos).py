@@ -1,4 +1,4 @@
-# Pedir un texto al usuario y guardarlo en un archivo
+# Pedir un texto al usuario y guardarlo en un archivo.
 
 texto = str(input("Escriba un texto para guardar: "))
 
