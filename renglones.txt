@@ -1,0 +1,6 @@
+Este es un texto que tiene
+
+algunas lineas vacías para trabajar 
+con un ejercicio de archivos.
+
+atte: yo.
