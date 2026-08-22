@@ -1,0 +1,17 @@
+Prólogo
+
+Solucionar problemas de ajedrez es uno de los ejercicios más placenteros que existen, no hay ajedrecista que pueda
+resistirse a intentar solucionarlos, por lo que la idea de hacer un libro con 1001 problemas para la editorial británica
+Gambit, me llenó inmediatamente de entusiasmo.
+Ese libro gigante, de 2010, se publica ahora en idioma castellano convertido en cinco libros más pequeños en la editorial
+Ventajedrez.
+Debo reconocer que pasada la primera sensación placentera, encontrar más de 1001 problemas en cierto modo "originales", 
+es decir, que no hayan aparecido en libros similares, me pareció una tarea muy complicada, y la cifra con cuatro números 
+me asustó.
+Pero no fue así, la búsqueda y posterior selección llevó bastante tiempo, pero no fue tan extenuante como temía, en parte 
+porque la tarea me resultó agradable.
+Para que no fueran problemas muy familiares, tenía claro que la mayoría tenía que provenir de dos fuentes principales, 
+torneos de los últimos años y partidas mías o cercanas a mí, que haya visto, o me hayan dejado huella, aunque, como 
+descubrí que es lo habitual, el libro, de alguna manera, va "cobrando vida" y parece que toma algunas decisiones propias.
+Las partidas provienen principalmente de la Mega Database, del semanario The Week in Chess y del diario Chess Today de los
+últimos años; los análisis tienen asistencia de Fritz y Rybka.
